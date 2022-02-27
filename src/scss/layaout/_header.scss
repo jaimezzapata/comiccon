@@ -1,0 +1,116 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.contenido-header {
+  @include m.telefono {
+    flex-direction: column;
+
+    .titulo {
+      text-align: center;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      visibility: hidden;
+
+      span {
+        font-size: 4.5rem;
+      }
+    }
+    .titulo2 {
+      visibility: visible;
+      width: 100px;
+      top: 0;
+      text-align: center;
+      left: auto;
+    }
+  }
+
+  @include m.tablet {
+    flex-direction: column;
+
+    .titulo {
+      text-align: center;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      right: auto;
+     }
+  }
+  
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.header {
+  background-color: v.$verde;
+  padding: 30px;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.titulo {
+  color: v.$naranja;
+  position: absolute;
+  right: -0;
+  span {
+    color: v.$negro;
+  }
+}
+
+.titulo2 {
+  color: v.$naranja;
+  position: absolute;
+  visibility: hidden;
+
+  span {
+    color: v.$negro;
+  }
+}
+
+.navegacion-princiapl {
+  @include m.telefono {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      color: v.$blanco;
+      font-size: 2rem;
+      background-color: v.$naranja;
+      padding: 0.2rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+
+      &:hover {
+        color: v.$negro;
+        background-color: v.$morado;
+      }
+    }
+  }
+  @include m.tablet {
+    margin-top: 90px;
+    gap: 0.5rem;
+  }
+}
+
+a {
+  color: v.$blanco;
+  font-size: 2rem;
+  width: 120px;
+  background-color: v.$naranja;
+  padding: 0.8rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: v.$negro;
+  background-color: v.$morado;
+}
+
+/* Media Querrys */
