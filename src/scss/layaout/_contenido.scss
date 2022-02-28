@@ -1,0 +1,35 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.contenido-festival {
+  @include m.telefono {
+    display: flex;
+    flex-direction: column;
+  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 5rem 0rem;
+}
+
+.imagen-festival {
+  background-color: v.$verde;
+  padding: 2rem;
+}
+
+.informacion-festival {
+  background-color: v.$naranja;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+
+  h3 {
+    text-shadow: 1px 1px v.$negro;
+  }
+
+  p {
+    text-align: center;
+  }
+}

@@ -23,7 +23,7 @@
 }
 
 .contenido-video {
-
+    z-index: 1;
     @include m.telefono {
 
         display: flex;
