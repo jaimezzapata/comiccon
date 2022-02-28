@@ -1,6 +1,17 @@
 @use "../base/variables" as v;
 @use "../base/mixin" as m;
 
+
+.conenido-main{
+  
+  h1{
+    margin-top: 13rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}
+
 .contenido-festival {
   @include m.telefono {
     display: flex;
@@ -11,7 +22,7 @@
     flex-direction: column;
   }
 
-  @include m.grid(2) ;
+  @include m.grid(2, 4rem) ;
   padding: 5rem 0rem;
 }
 

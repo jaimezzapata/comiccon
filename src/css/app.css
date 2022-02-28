@@ -556,10 +556,16 @@ a:hover {
   text-shadow: 1px 1px #000000;
 }
 
+.conenido-main h1 {
+  margin-top: 13rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .contenido-festival {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 4rem;
   padding: 5rem 0rem;
 }
 @media (max-width: 480px) {
