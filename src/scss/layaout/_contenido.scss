@@ -2,17 +2,46 @@
 @use "../base/mixin" as m;
 
 
-.conenido-main{
-  
-  h1{
+
+/* Inicio estilos del contenido principal */
+
+.conenido-main {
+  h1 {
     margin-top: 13rem;
     text-align: center;
     text-transform: uppercase;
   }
-
+  @include m.telefono {
+    h1 {
+      margin-top: 2rem;
+    }
+  }
 }
 
 .contenido-festival {
+
+  .imagen-festival {
+    background-color: v.$verde;
+    padding: 2rem;
+  }
+
+  .informacion-festival {
+    background-color: v.$naranja;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem;
+
+    h3 {
+      text-shadow: 1px 1px v.$negro;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
   @include m.telefono {
     display: flex;
     flex-direction: column;
@@ -22,28 +51,10 @@
     flex-direction: column;
   }
 
-  @include m.grid(2, 4rem) ;
+  @include m.grid(2, 3rem);
   padding: 5rem 0rem;
 }
 
-.imagen-festival {
-  background-color: v.$verde;
-  padding: 2rem;
-}
+/* Fin estilos del contenido principal */
 
-.informacion-festival {
-  background-color: v.$naranja;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 3rem;
 
-  h3 {
-    text-shadow: 1px 1px v.$negro;
-  }
-
-  p {
-    text-align: center;
-  }
-}

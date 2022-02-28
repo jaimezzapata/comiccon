@@ -1,47 +1,8 @@
 @use "../base/variables" as v;
 @use "../base/mixin" as m;
 
-.contenido-header {
-  @include m.telefono {
-    flex-direction: column;
 
-    .titulo {
-      text-align: center;
-      font-size: 3.5rem;
-      text-transform: uppercase;
-      visibility: hidden;
-
-      span {
-        font-size: 4.5rem;
-      }
-    }
-    .titulo2 {
-      visibility: visible;
-      width: 100px;
-      top: 0;
-      text-align: center;
-      left: auto;
-    }
-  }
-
-  @include m.tablet {
-    flex-direction: column;
-
-    .titulo {
-      text-align: center;
-      font-size: 3.5rem;
-      text-transform: uppercase;
-      right: auto;
-     }
-  }
-  
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  position: relative;
-}
+/* Inicio estilos Header */
 
 .header {
   background-color: v.$verde;
@@ -50,6 +11,47 @@
   -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+
+  .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
+    @include m.telefono {
+      flex-direction: column;
+
+      .titulo {
+        text-align: center;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        visibility: hidden;
+
+        span {
+          font-size: 4.5rem;
+        }
+      }
+      .titulo2 {
+        visibility: visible;
+        width: 100px;
+        top: 0;
+        text-align: center;
+        left: auto;
+      }
+    }
+
+    @include m.tablet {
+      flex-direction: column;
+
+      .titulo {
+        text-align: center;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        right: auto;
+      }
+    }
+  }
 }
 
 .titulo {
@@ -123,4 +125,4 @@ a:hover {
   background-color: v.$morado;
 }
 
-/* Media Querrys */
+/* Fin estilos Header */

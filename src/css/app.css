@@ -389,6 +389,9 @@ img {
 }
 
 /* Fin configuración de estilos por etiqueta de forma global */
+
+
+
 /* Inicio configuración de estilos por clase de forma global */
 .contenedor {
   width: 95%;
@@ -397,7 +400,18 @@ img {
 }
 
 /* Fin configuración de estilos por clase de forma global */
-.contenido-header {
+
+
+/* Inicio estilos Header */
+.header {
+  background-color: #0d4dc4;
+  padding: 30px;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.header .contenido-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -405,19 +419,19 @@ img {
   position: relative;
 }
 @media (max-width: 480px) {
-  .contenido-header {
+  .header .contenido-header {
     flex-direction: column;
   }
-  .contenido-header .titulo {
+  .header .contenido-header .titulo {
     text-align: center;
     font-size: 3.5rem;
     text-transform: uppercase;
     visibility: hidden;
   }
-  .contenido-header .titulo span {
+  .header .contenido-header .titulo span {
     font-size: 4.5rem;
   }
-  .contenido-header .titulo2 {
+  .header .contenido-header .titulo2 {
     visibility: visible;
     width: 100px;
     top: 0;
@@ -426,24 +440,15 @@ img {
   }
 }
 @media (max-width: 768px) {
-  .contenido-header {
+  .header .contenido-header {
     flex-direction: column;
   }
-  .contenido-header .titulo {
+  .header .contenido-header .titulo {
     text-align: center;
     font-size: 3.5rem;
     text-transform: uppercase;
     right: auto;
   }
-}
-
-.header {
-  background-color: #0d4dc4;
-  padding: 30px;
-  border-radius: 0px 0px 10px 10px;
-  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .titulo {
@@ -515,7 +520,7 @@ a:hover {
   background-color: #a55ec9;
 }
 
-/* Media Querrys */
+/* Fin estilos Header */
 .video {
   position: relative;
   max-height: 50rem;
@@ -530,43 +535,67 @@ a:hover {
   justify-content: flex-end;
   align-items: flex-start;
 }
-.video video {
-  width: 100%;
-  display: block;
-}
-
-.contenido-video {
+.video .overlay .contenido-video {
   z-index: 1;
   background-color: rgba(192, 190, 190, 0.39);
   padding: 1rem;
 }
 @media (max-width: 480px) {
-  .contenido-video {
+  .video .overlay .contenido-video {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .contenido-video h2 {
+  .video .overlay .contenido-video h2 {
     font-size: 3rem;
     text-align: center;
   }
 }
-.contenido-video h2, .contenido-video p {
+.video .overlay .contenido-video h2,
+.video .overlay .contenido-video p {
   color: #000000;
   text-shadow: 1px 1px #000000;
 }
+.video video {
+  width: 100%;
+  display: block;
+}
 
+/* Inicio estilos del contenido principal */
 .conenido-main h1 {
   margin-top: 13rem;
   text-align: center;
   text-transform: uppercase;
 }
+@media (max-width: 480px) {
+  .conenido-main h1 {
+    margin-top: 2rem;
+  }
+}
 
 .contenido-festival {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  gap: 3rem;
   padding: 5rem 0rem;
+}
+.contenido-festival .imagen-festival {
+  background-color: #0d4dc4;
+  padding: 2rem;
+}
+.contenido-festival .informacion-festival {
+  background-color: #e4360a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+}
+.contenido-festival .informacion-festival h3 {
+  text-shadow: 1px 1px #000000;
+}
+.contenido-festival .informacion-festival p {
+  text-align: center;
 }
 @media (max-width: 480px) {
   .contenido-festival {
@@ -581,22 +610,4 @@ a:hover {
   }
 }
 
-.imagen-festival {
-  background-color: #0d4dc4;
-  padding: 2rem;
-}
-
-.informacion-festival {
-  background-color: #e4360a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 3rem;
-}
-.informacion-festival h3 {
-  text-shadow: 1px 1px #000000;
-}
-.informacion-festival p {
-  text-align: center;
-}
+/* Fin estilos del contenido principal */
