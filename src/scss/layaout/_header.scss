@@ -95,13 +95,23 @@
   @include m.tablet {
     margin-top: 90px;
     gap: 0.5rem;
+
+    a {
+      color: v.$blanco;
+      font-size: 1.5rem;
+      width: 160px;
+      background-color: v.$naranja;
+      padding: 0.3rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
   }
 }
 
 a {
   color: v.$blanco;
   font-size: 2rem;
-  width: 120px;
+  width: 160px;
   background-color: v.$naranja;
   padding: 0.8rem;
   border-radius: 5px;
