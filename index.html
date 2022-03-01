@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,106 +10,128 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./build/css/app.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+        rel="stylesheet" />
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <div class="contenedor contenido-header">
-        <h1 class="titulo">Pow <span>Zone</span></h1>
-        <h1 class="titulo2">P <span>Z</span></h1>
+        <div class="contenedor contenido-header">
+            <h1 class="titulo">Pow <span>Zone</span></h1>
+            <h1 class="titulo2">P <span>Z</span></h1>
 
-        <nav class="navegacion-princiapl">
-          <a href="#">Invitados</a>
-          <a href="#">Galeria</a>
-          <a href="#">Entradas</a>
-          <a href="#">Programación</a>
-        </nav>
-      </div>
+            <nav class="navegacion-princiapl">
+                <a href="#">Invitados</a>
+                <a href="#">Galeria</a>
+                <a href="#">Entradas</a>
+                <a href="#">Programación</a>
+            </nav>
+        </div>
     </header>
 
     <div class="video">
-      <div class="overlay">
-        <div class="contenedor contenido-video">
-          <h2>Aprende a dibujar Comic</h2>
-          <p>Taller de dibujo COMIC</p>
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Aprende a dibujar Comic</h2>
+                <p>Taller de dibujo COMIC</p>
+            </div>
         </div>
-      </div>
-      <video autoplay muted loop>
-        <source src="./video/cap.mp4" type="video/mp4" />
-        <source src="./video/cap.ogg" type="video/ogg" />
-        <source src="./video/cap.webm" type="video/webm" />
-      </video>
+        <video autoplay muted loop>
+            <source src="./video/cap.mp4" type="video/mp4" />
+            <source src="./video/cap.ogg" type="video/ogg" />
+            <source src="./video/cap.webm" type="video/webm" />
+        </video>
     </div>
 
     <main class="contenedor conenido-main">
-      <h1>Invitados</h1>
-      <section class="contenedor contenido-festival">
-        <div class="imagen-festival">
-          <img src="./src/img/akira.jpg" alt="Mangaka" />
-        </div>
-        <div class="informacion-festival">
-          <h3>Akira Toriyama</h3>
-          <p>
-            El famoso creador de la icónica serie Dragon Ball y Dragon Ball Z
-          </p>
-          <a href="./invitados.html">Ver invitado</a>
-        </div>
-        <div class="imagen-festival">
-          <img src="./src/img/oda.jpeg" alt="Mangaka" />
-        </div>
-        <div class="informacion-festival">
-          <h3>Eichiro Oda</h3>
-          <p>El famoso creador de la icónica serie One Piece</p>
-          <a href="./invitados.html">Ver invitado</a>
-        </div>
-        <div class="imagen-festival">
-          <img src="./src/img/stan.jpg" alt="Mangaka" />
-        </div>
-        <div class="informacion-festival">
-          <h3>Stan Lee</h3>
-          <p>El famoso creador de todas las historias de Marvel</p>
-          <a href="./invitados.html">Ver invitado</a>
-        </div>
-      </section>
+        <h1>Invitados</h1>
+        <section class="contenedor contenido-festival">
+            <div class="imagen-festival">
+                <picture>
+                    <source srcset="./build/img/akira.webp" type="image/webp" />
+                    <img src="./build/img/akira.jpg" alt="" />
+                </picture>
+            </div>
+            <div class="informacion-festival">
+                <h3>Akira Toriyama</h3>
+                <p>
+                    El famoso creador de la icónica serie Dragon Ball y Dragon Ball Z
+                </p>
+                <a href="./invitados.html">Ver invitado</a>
+            </div>
+            <div class="imagen-festival">
+                <picture>
+                    <source srcset="./build/img/oda.webp" type="image/webp" />
+                    <img src="./build/img/akira.jpg" alt="" />
+                </picture>
+            </div>
+            <div class="informacion-festival">
+                <h3>Eichiro Oda</h3>
+                <p>El famoso creador de la icónica serie One Piece</p>
+                <a href="./invitados.html">Ver invitado</a>
+            </div>
+            <div class="imagen-festival">
+                <picture>
+                    <source srcset="./build/img/stan.webp" type="image/webp" />
+                    <img src="./build/img/akira.jpg" alt="" />
+                </picture>
+            </div>
+            <div class="informacion-festival">
+                <h3>Stan Lee</h3>
+                <p>El famoso creador de todas las historias de Marvel</p>
+                <a href="./invitados.html">Ver invitado</a>
+            </div>
+        </section>
     </main>
 
     <section class="contenido grid-galeria">
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/dbz.webp" alt="imagen uno" />
-      </div>
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/one.webp" alt="imagen uno" />
-      </div>
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/marvel.webp" alt="imagen uno" />
-      </div>
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/one.webp" alt="imagen uno" />
-      </div>
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/dbz.webp" alt="imagen uno" />
-      </div>
-      <div class="contenido-galeria">
-        <img src="./build/img/comic/marvel.webp" alt="imagen uno" />
-      </div>
-
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/dbz.webp" alt="imagen uno" />
+        </div>
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/one.webp" alt="imagen uno" />
+        </div>
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/marvel.webp" alt="imagen uno" />
+        </div>
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/one.webp" alt="imagen uno" />
+        </div>
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/dbz.webp" alt="imagen uno" />
+        </div>
+        <div class="contenido-galeria">
+            <img src="./build/img/comic/marvel.webp" alt="imagen uno" />
+        </div>
     </section>
 
     <footer class="contenedor footer">
-      <nav class="redes-sociales">
-        <a href="#"><img src="./src/img/redes/whats.png" alt="" /></a>
-        <a href="#"><img src="./src/img/redes/linkedin.png" alt="" /></a>
-        <a href="#"><img src="./src/img/redes/github.png" alt="" /></a>
-      </nav>
-      <div class="informacion-autor">
-        <p>Jaime Zapata Valencia</p>
-        <p>Desarrollador de Software</p>
-        <p>&copy;</p>
-      </div>
+        <nav class="redes-sociales">
+            <a href="#">
+                <picture>
+                    <source srcset="./build/img/redes/whats.webp" type="image/webp" />
+                    <img src="./build/img/redes/whats.png" alt="" />
+                </picture>
+            </a>
+            <a href="#">
+                <picture>
+                    <source srcset="./build/img/redes/linkedin.webp" type="image/webp" />
+                    <img src="./build/img/redes/linkedin.png" alt="" />
+                </picture>
+            </a>
+            <a href="#">
+                <picture>
+                    <source srcset="./build/img/redes/github.webp" type="image/webp" />
+                    <img src="./build/img/redes/github.png" alt="" />
+                </picture>
+            </a>
+        </nav>
+        <div class="informacion-autor">
+            <p>Jaime Zapata Valencia</p>
+            <p>Desarrollador de Software</p>
+            <p>&copy;</p>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
