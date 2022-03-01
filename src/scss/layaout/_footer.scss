@@ -1,0 +1,28 @@
+@use '../base/variables' as m;
+@use '../base/mixin' as v;
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .redes-sociales {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a{
+            background-color: transparent;
+            width: auto;
+        }
+    }
+
+    .informacion-autor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

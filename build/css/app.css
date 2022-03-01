@@ -606,3 +606,36 @@ a:hover {
 }
 
 /* Fin estilos del contenido principal */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer .redes-sociales {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer .redes-sociales a {
+  background-color: transparent;
+  width: auto;
+}
+.footer .informacion-autor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 5rem;
+}
+.grid-galeria .contenido-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
