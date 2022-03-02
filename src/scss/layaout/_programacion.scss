@@ -1,0 +1,70 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.programacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  align-items: center;
+  background-color: v.$negro;
+
+  .programacion-titulo {
+    color: v.$blanco;
+    text-transform: uppercase;
+    text-shadow: 1px 1px v.$blanco;
+  }
+
+  .invitados-contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include m.telefono {
+      flex-wrap: wrap;
+    }
+
+    @include m.tablet {
+        flex-wrap: wrap;
+      }
+
+    .invitado {
+      margin-top: 2rem;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .akira,
+    .stan,
+    .eichiro {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .akira {
+      background-color: v.$verde;
+    }
+
+    .stan {
+      background-color: v.$naranja;
+    }
+
+    .eichiro {
+      background-color: v.$amarillo;
+    }
+
+    .calendario {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .nombre-invitado {
+      margin-top: 2.5rem;
+      text-transform: uppercase;
+      text-shadow: 1px 1px v.$negro;
+    }
+  }
+}

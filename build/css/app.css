@@ -367,6 +367,10 @@ p {
   color: #000000;
 }
 
+ul, ol, li {
+  list-style: none;
+}
+
 h1, h2, h3 {
   font-family: "Roboto", sans-serif;
 }
@@ -628,14 +632,63 @@ a:hover {
   align-items: center;
 }
 
-.grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 5rem;
-}
-.grid-galeria .contenido-galeria {
+.programacion {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex;
   align-items: center;
+  background-color: #000000;
+}
+.programacion .programacion-titulo {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #ffffff;
+}
+.programacion .invitados-contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .programacion .invitados-contenedor {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .programacion .invitados-contenedor {
+    flex-wrap: wrap;
+  }
+}
+.programacion .invitados-contenedor .invitado {
+  margin-top: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.programacion .invitados-contenedor .akira,
+.programacion .invitados-contenedor .stan,
+.programacion .invitados-contenedor .eichiro {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.programacion .invitados-contenedor .akira {
+  background-color: #0d4dc4;
+}
+.programacion .invitados-contenedor .stan {
+  background-color: #e4360a;
+}
+.programacion .invitados-contenedor .eichiro {
+  background-color: #f8ea25;
+}
+.programacion .invitados-contenedor .calendario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.programacion .invitados-contenedor .nombre-invitado {
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000000;
 }
