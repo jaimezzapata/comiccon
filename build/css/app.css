@@ -722,7 +722,7 @@ a:hover {
   z-index: 2;
   display: grid;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .overlay picture {
   display: block;
@@ -736,4 +736,31 @@ a:hover {
   text-transform: uppercase;
   background-color: #f8ea25;
   cursor: pointer;
+}
+
+.boletos {
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem;
+}
+.boletos h2 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000000;
+}
+.boletos .contenido-boletos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  gap: 10rem;
+}
+.boletos .boleto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boletos .boleto ul li {
+  padding: 1rem;
 }

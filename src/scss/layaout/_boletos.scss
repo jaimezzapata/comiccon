@@ -1,0 +1,32 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.boletos {
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem;
+
+  h2 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px v.$negro;
+  }
+
+  .contenido-boletos {
+    @include m.grid(2, 3rem);
+    gap: 10rem;
+  }
+
+  .boleto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+}
