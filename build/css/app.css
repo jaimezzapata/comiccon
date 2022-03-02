@@ -692,3 +692,48 @@ a:hover {
   text-transform: uppercase;
   text-shadow: 1px 1px #000000;
 }
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.galeria .galeria-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.galeria .galeria-img picture {
+  cursor: pointer;
+}
+.galeria .galeria-img picture:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay picture {
+  display: block;
+  max-width: 75rem;
+  cursor: pointer;
+}
+.overlay .btn-cerrar {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  background-color: #f8ea25;
+  cursor: pointer;
+}
