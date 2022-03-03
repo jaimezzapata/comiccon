@@ -753,14 +753,18 @@ a:hover {
 .boletos .contenido-boletos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  gap: 10rem;
+  gap: 2rem;
+  gap: 5rem;
+}
+@media (max-width: 480px) {
+  .boletos .contenido-boletos {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .boletos .boleto {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.boletos .boleto ul li {
-  padding: 1rem;
+  align-items: center;
 }
