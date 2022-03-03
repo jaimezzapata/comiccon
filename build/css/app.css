@@ -765,6 +765,7 @@ a:hover {
 .boletos .boleto {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #f8ea25;
 }

@@ -4,6 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const iniciarApp = () => {
   crearGaleria();
+  scrollNav();
+};
+
+const scrollNav = () => {
+  const enlaces = document.querySelectorAll(".navegacion-princiapl a");
+
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("click", (e) => {
+      console.log(e.target.href.value);
+    });
+  });
 };
 
 const crearGaleria = () => {
@@ -34,21 +45,21 @@ const mostrarImagen = (indice) => {
     
     `;
 
-    const overlay = document.createElement('div')
-    overlay.appendChild(imagen)
-    overlay.classList.add('overlay')
+  const overlay = document.createElement("div");
+  overlay.appendChild(imagen);
+  overlay.classList.add("overlay");
 
-    const cerrarImg = document.createElement('input');
-    cerrarImg.value = "Cerrar";
-    cerrarImg.type = "submit"
-    cerrarImg.classList.add('btn-cerrar');
+  const cerrarImg = document.createElement("input");
+  cerrarImg.value = "Cerrar";
+  cerrarImg.type = "submit";
+  cerrarImg.classList.add("btn-cerrar");
 
-    cerrarImg.onclick = () => {
-        overlay.remove('verlay')
-      };
+  cerrarImg.onclick = () => {
+    overlay.remove("verlay");
+  };
 
-    overlay.appendChild(cerrarImg);
+  overlay.appendChild(cerrarImg);
 
-    const body = document.querySelector('body')
-    body.appendChild(overlay);
+  const body = document.querySelector("body");
+  body.appendChild(overlay);
 };
