@@ -710,6 +710,10 @@ a:hover {
   transform: scale(1.3);
   transition: 0.5s;
 }
+.galeria .galeria-img picture:hover::before {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
 
 .overlay {
   position: fixed;

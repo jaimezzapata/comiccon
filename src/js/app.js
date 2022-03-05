@@ -7,12 +7,28 @@ const iniciarApp = () => {
   scrollNav();
 };
 
+const navegacionFija = () => {
+  const barraNavegacion = document.querySelector(".header");
+  const invitados = document.querySelector(".conenido-main");
+
+  window.addEventListener("scroll", () => {
+    if (invitados.getBoundingClientRect().bottom < 0) {
+      barraNavegacion.classList.add("fixed");
+    } else {
+      barraNavegacion.classList.remove("fixed");
+    }
+  });
+};
+
 const scrollNav = () => {
   const enlaces = document.querySelectorAll(".navegacion-princiapl a");
 
-  enlaces.forEach(enlace => {
+  enlaces.forEach((enlace) => {
     enlace.addEventListener("click", (e) => {
-      console.log(e.target.href.value);
+      e.preventDefault();
+      const seccionScroll = e.target.attributes.href.value;
+      const seccion = document.querySelector(seccionScroll);
+      seccion.scrollIntoView({ behavior: "smooth" });
     });
   });
 };
