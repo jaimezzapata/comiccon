@@ -1,16 +1,20 @@
 @use "../base/variables" as v;
 @use "../base/mixin" as m;
 
-
 /* Inicio estilos Header */
 
 .header {
+  @include m.telefono {
+    position: static;
+  }
   background-color: v.$verde;
   padding: 30px;
   border-radius: 0px 0px 10px 10px;
   -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
 
   .contenido-header {
     display: flex;

@@ -5,11 +5,15 @@ const webp = require("gulp-webp");
 const avif = require("gulp-avif");
 const imagemin = require("gulp-imagemin");
 const cache = require("gulp-cache");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcss = require("gulp-postcss");
 
 function compilarSass(done) {
   src("src/scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("build/css"));
   done();
 }
@@ -50,8 +54,7 @@ function calidadImg(done) {
 }
 
 function javaScript(done) {
-  src("src/js/**/*.js")
-    .pipe(dest("buil/js"));
+  src("src/js/**/*.js").pipe(dest("build/js"));
   done();
 }
 
@@ -65,4 +68,10 @@ exports.calidadImg = calidadImg;
 exports.convertirWebp = convertirWebp;
 exports.convertirAvif = convertirAvif;
 exports.javaScript = javaScript;
-exports.dev = parallel(calidadImg, convertirWebp, convertirAvif, javaScript, dev);
+exports.dev = parallel(
+  calidadImg,
+  convertirWebp,
+  convertirAvif,
+  javaScript,
+  dev
+);
